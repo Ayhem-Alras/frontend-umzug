@@ -64,3 +64,5 @@ $RECYCLE.BIN/
 *.swo
 *.orig
 *.rej
+
+.vercel
