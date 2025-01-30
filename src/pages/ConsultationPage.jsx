@@ -16,12 +16,11 @@ const ConsultationPage = () => {
     setStatus("Nachricht wird gesendet...");
 
     try {
-      // Update this URL to the deployed backend URL
-      const response = await axios.post("https://your-backend-domain.com/send", formData);
+      const response = await axios.post("https://backend-umzug8.onrender.com/send", formData);
       setStatus(response.data.message);
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
-      console.error("Fehler beim Senden der Nachricht:", error);
+      console.error("Fehler beim Senden der Nachricht:", error.response || error.message);
       setStatus("Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.");
     }
   };
